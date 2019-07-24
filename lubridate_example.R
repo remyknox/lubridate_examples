@@ -4,6 +4,8 @@ library(lubridate)
 ####----Comparing Base R to Lubridate----####
 
 # 'date' as a POSIXct date-time object
+# The POSIXct class stores date/time values as the number of seconds since January 1, 1970, 
+# while the POSIXlt class stores them as a list with elements for second, minute, hour, day, month, and year, among others.
 r_date <- as.POSIXct("01-01-2010", format = "%d-%m-$Y", tz = "UTC")  # Base R
 print(r_date)
 date <- dmy("01-01-2010")  # Lubridate
@@ -20,6 +22,7 @@ month(date) <- 2
 # change 'date' to one day earlier and set time zone to "GMT" 
 date <- seq(date, length = 2, by = "-1 day")[2]; as.POSIXct(format(as.POSIXct(date), tz = "UTC"), tz = "GMT")
 date <- date -days(1); with_tz(date, tz = "GMT")
+
 
 # some other useful date manipulation
 
