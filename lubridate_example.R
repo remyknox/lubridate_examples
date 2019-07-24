@@ -5,7 +5,9 @@ library(lubridate)
 
 # 'date' as a POSIXct date-time object
 r_date <- as.POSIXct("01-01-2010", format = "%d-%m-$Y", tz = "UTC")  # Base R
+print(r_date)
 date <- dmy("01-01-2010")  # Lubridate
+print(date)
 
 # extracting the month from 'date'
 as.numeric(format(date, "%m")) 
