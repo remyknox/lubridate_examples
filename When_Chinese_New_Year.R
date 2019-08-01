@@ -16,8 +16,8 @@ lunar.newyear <- function(year){
   month_ny = month(ymd(cny[index]), label = T, abbr = F)
   day_ny = day(ymd(cny[index]))
   weekday_ny = wday(ymd(cny[index]), label = T, abbr = F)
-  animals = c("Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig")
-  zodiac = animals[(index + 6)%%12]
+  animals = c( "Pig", "Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog")
+  zodiac = animals[(index + 6)%%12+1]
   print(paste0("The ", year, " Chinese New Year is ", weekday_ny, ", ", month_ny, " ", day_ny, ".",
                " It's a ", zodiac, " year!"))
         }
