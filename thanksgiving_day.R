@@ -1,8 +1,8 @@
-#' Function that takes in a year and returns when what thanksgiving date. 
+#' Function that takes in a year and returns the date for thanksgiving (ie, November 21st, 2019). 
 #' Thanksgiving is not celebrated on the same date every year, rather it is the 4th thursday of november.
 #' 
 #' @param year should be an integer/string that is 2 or 4 characters long
-#' @example thanksgiving_date(2019)
+#' @example thanksgiving_date(2019) 
 
 thanksgiving_day <- function(year){
   # check if the parameter is a number and length of 4
