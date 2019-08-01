@@ -3,6 +3,7 @@ library(tidyverse)
 library(lubridate)
 library(seasonal)
 
+
 # "The solar year, which is the basis of the Gregorian calendar used around the world, 
 #is a bit more than 365 days long. The traditional Chinese calendar, 
 # which determines the date of the Lunar New Year, is lunisolar, 
@@ -11,6 +12,15 @@ library(seasonal)
 # To keep the calendar in sync with the sun and the seasons, the Chinese add an extra leap month about once every three years.
 # source: https://people.howstuffworks.com/culture-traditions/holidays-other/chinese-new-year1.htm."
 
+#' Title
+#'
+#' @param year 
+#'
+#' @return the new year date and the zodiac animal of the year
+#' @export
+#'
+#' @examples
+#' 
 lunar.newyear <- function(year){
   index = year - 1929
   month_ny = month(ymd(cny[index]), label = T, abbr = F)
