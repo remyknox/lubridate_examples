@@ -14,7 +14,7 @@ library(seasonal)
 
 #' Title
 #'
-#' @param year 
+#' @param year between 1930 to 2030
 #'
 #' @return the new year date and the zodiac animal of the year
 #' @export
